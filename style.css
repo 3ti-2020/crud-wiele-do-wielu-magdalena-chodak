@@ -1,0 +1,27 @@
+body{
+    background: blue;
+    display: grid;
+    grid-template-areas:
+    'a a a'
+    'b c c'
+    'd d d' ;
+    grid-gap: 10px;
+    padding: 10px;
+    height: 96vh;
+}
+.header{
+    grid-area: a;
+    background: lightblue;
+}
+.main{
+    grid-area: b;
+    background: lightblue;
+}
+.sidebar{
+    grid-area: c;
+    background: lightblue;
+}
+.footer{
+    grid-area: d;
+    background: lightblue;
+}
