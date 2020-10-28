@@ -12,6 +12,9 @@ body{
 .header{
     grid-area: a;
     background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main{
     grid-area: b;
@@ -20,6 +23,9 @@ body{
 .sidebar{
     grid-area: c;
     background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer{
     grid-area: d;
