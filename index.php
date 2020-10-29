@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Magdalena Chodak - grupa2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="header">Magdalena Chodak</div>
-<div class="main"></div>
+<div class="main">
+<form action="insert.php" method="POST">
+
+<br><label for="name">Autor:</label>  
+<br><input type="text" name="name"> 
+
+<br><label for="tytul">Tytul:</label>  
+<br><input type="text" name="tytul"> 
+
+<input type="submit" value="INSERT"> 
+</form>
+</div>
 <div class="sidebar">
 <?php
     $servername="127.0.0.1";
