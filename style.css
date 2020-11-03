@@ -19,6 +19,9 @@ body{
 .main{
     grid-area: b;
     background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sidebar{
     grid-area: c;

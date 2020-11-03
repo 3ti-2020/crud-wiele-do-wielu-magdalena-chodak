@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">Magdalena Chodak</div>
+<div class="header"><h1>Magdalena Chodak</h1></div>
 <div class="main">
 
 <form action='insert.php' method='POST'>
@@ -15,7 +15,7 @@
         <input type='text' name='name'>
         <br>Tytuł:
         <input type='text' name='tytul'>
-        <br><input class='btn' type='submit' value='DODAJ'>
+        <br><input type='submit' value='DODAJ'>
     </form>
 </div>
 <div class="sidebar">
