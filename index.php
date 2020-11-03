@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header"><h1>Magdalena Chodak</h1></div>
+<div class="header"><h1>Magdalena Chodak</h1>
+        
+</div>
 <div class="main">
 
 <form action='insert.php' method='POST'>
@@ -52,7 +54,45 @@
     echo("</table>");
     ?>
 </div>
-<div class="footer"></div>
+<div class="footer">
+    <div class="log">
+    <h3>NIESPODZIANKĘ?</h3>
+<?php 
+    session_start();
+    // var_dump($_SESSION);
+    
+
+    if(isset($_GET['akcja']) && $_GET['akcja']=='wyloguj'){
+        unset($_SESSION['zalogowany']);
+        
+    }
+
+    if(!isset($_SESSION['zalogowany'])){
+        
+    ?>
+
+    <form action="index2.php" method="POST">
+        <br>Login:
+        <input type="text" name="login" placeholder="login">
+         <br>Pass:a
+        <input type="text" name="pass" placeholder="pass">
+        <input type="submit" value="zaloguj">
+    </form>
+    <?php 
+    }else{
+        // echo("<li>zalogowany");
+        echo("<br><a href='index.php?akcja=wyloguj'>WYLOGUJ</a>");
+    };
+    ?>
+    </div>
+    <div class="menu">
+    <h3>MENU</h3>
+    <ul>
+        <li><a href='index2.php'>Kartka</a>
+    </ul>
+    </div>
+    
+</div>
 </body>
 <script src="script.js"></script>
 </html>
