@@ -12,10 +12,8 @@ body{
 .header{
     grid-area: a;
     background: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
 .main{
     grid-area: b;
     background: lightblue;

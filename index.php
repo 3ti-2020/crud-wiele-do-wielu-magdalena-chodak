@@ -8,10 +8,12 @@
 </head>
 <body>
 <div class="header">
+<div class="git">
 <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak">GitHub</a>
-
+</div>
+<div class="title">
 <h1>Magdalena Chodak</h1>
-        
+</div>     
 </div>
 <div class="main">
 <form action='insert.php' method='POST'>
@@ -30,6 +32,9 @@
     $dbname="sql7374471";
 
     $conn=new mysqli($servername,$username,$password,$dbname);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+      }
 
     $result=$conn->query("select * from ksiazki");
     echo("<table border='1'>");
@@ -73,7 +78,7 @@
         
     ?>
 
-    <form action="index2.php" method="POST">
+    <form action="card.php" method="POST">
         <br>Login:
         <input type="text" name="login" placeholder="login">
          <br>Pass:a
@@ -90,7 +95,7 @@
     <div class="menu">
     <h3>MENU</h3>
     <ul>
-        <li><a href='index2.php'>Kartka</a>
+        <li><a href='card.php'>Kartka</a>
     </ul>
     </div>
     

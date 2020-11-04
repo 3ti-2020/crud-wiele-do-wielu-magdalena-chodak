@@ -4,6 +4,10 @@
            $password="3ysRJhApZw";
            $dbname="sql7374471";
             $conn=new mysqli($servername,$username,$password,$dbname);
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+              }
+              
             $name = $_POST['name'];
             $tytul = $_POST['tytul'];
             
