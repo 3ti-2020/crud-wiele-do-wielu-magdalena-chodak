@@ -13,19 +13,11 @@ body{
     grid-area: a;
     background: lightblue;
     display: flex;
-}
-.git{
-    width: 10%;
-    display: flex;
-    flex-direction: left;
-    align-items: center;
-}
-.title{
-    width: 90%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
+}
+
 .main{
     grid-area: b;
     background: lightblue;
