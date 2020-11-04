@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header"><h1>Magdalena Chodak</h1>
+<div class="header">
+<a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak">GitHub</a>
+
+<h1>Magdalena Chodak</h1>
         
 </div>
 <div class="main">
-
 <form action='insert.php' method='POST'>
         <br>Autor:
         <input type='text' name='name'>
