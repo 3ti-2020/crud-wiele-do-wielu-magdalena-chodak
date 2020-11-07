@@ -9,11 +9,16 @@
 <body>
 <div class="header">
 <div class="git">
-<a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak">GitHub</a>
+<a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak"><img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg"></a>
 </div>
 <div class="title">
 <h1>Magdalena Chodak</h1>
-</div>     
+</div> 
+<div class="menu">
+    
+    <a href='card.php' >Kartka</a>
+   
+    </div>    
 </div>
 <div class="main">
 <form action='insert.php' method='POST'>
@@ -92,12 +97,7 @@
     };
     ?>
     </div>
-    <div class="menu">
-    <h3>MENU</h3>
-    <ul>
-        <li><a href='card.php'>Kartka</a>
-    </ul>
-    </div>
+    
     
 </div>
 </body>
