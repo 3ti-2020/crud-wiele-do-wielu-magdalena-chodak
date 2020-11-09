@@ -31,7 +31,7 @@
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("select * from ksiazki");
+    $result=$conn->query("select `id_autor_tytul`, `name`,`tytul` from `lib_autor_tytul`,`lib_tytuly`, `lib_autorzy` where `lib_tytuly`.`id_tytul` =`lib_autor_tytul`.`id_tytul` and `lib_autor_tytul`.`id_autor` = `lib_autorzy`.`id_autor`");
     echo("<table border='1'>");
     echo("<tr>
     <th>id</th>
