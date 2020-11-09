@@ -13,5 +13,5 @@
 
             echo("$sql");
             mysqli_query($conn,$sql);
-            // header("location:index.php");
+            header("location:index.php");
 ?>
