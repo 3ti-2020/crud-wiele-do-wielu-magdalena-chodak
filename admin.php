@@ -14,57 +14,18 @@
 <div class="title">
 <h1>Magdalena Chodak</h1>
 </div> 
-<div class="menu">
-    
-<button id="modal-btn" class="button">Logowanie</button>
-
-<div id="my-modal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Logowanie</h2>
-    </div>
-    <div class="modal-body">
-    <?php 
-    session_start();
-    // var_dump($_SESSION);
-    
-
-    if(isset($_GET['akcja']) && $_GET['akcja']=='wyloguj'){
-        unset($_SESSION['zalogowany']);
-        
-    }
-
-    if(!isset($_SESSION['zalogowany'])){
-        
-    ?>
-
-    <form action="admin.php" method="POST">
-        <br>Login:
-        <input type="text" name="login" placeholder="login">
-         <br>Password:
-        <input type="text" name="pass" placeholder="pass">
-        <input type="submit" value="zaloguj">
-    </form>
-    <?php 
-    }else{
-        // echo("<li>zalogowany");
-        echo("<br><a href='index.php?akcja=wyloguj'>WYLOGUJ</a>");
-    };
-    ?>
-    </div>
-    <div class="modal-footer">
-        Admin -> hasło:a
-    </div>
-  </div>
+<div class="menu">  
+<A href="index.php">WYLOGUJ</a>
 </div>
-   
-    </div>    
 </div>
 <div class="main">
-    
-    <a href='card.php' >Kartka</a>
-
+<form action='insert.php' method='POST'>
+        <br>Autor:
+        <input type='text' name='name'>
+        <br>Tytuł:
+        <input type='text' name='tytul'>
+        <br><input type='submit' value='DODAJ'>
+    </form>
 </div>
 <div class="sidebar">
 <?php
@@ -91,7 +52,13 @@
         echo("
         <td>".$row['id_autor_tytul']."</td>
         <td>".$row['name']."</td>
-        <td>".$row['tytul']."</td>");
+        <td>".$row['tytul']."</td>
+        <td>
+        <form action='delete.php' method='POST'>
+        <input type='text'  value=".$row['id_autor_tytul']." style='display: none' name='id_to_delete'>
+        <input type='submit' value='delete'>
+    </form>
+</td>");
         echo("</tr>");
     };
     echo("</table>");

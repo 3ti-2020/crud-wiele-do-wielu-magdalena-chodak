@@ -11,7 +11,7 @@
     session_start();
     // var_dump($_SESSION);
 
-    if(isset($_POST['pass']) && $_POST['pass']=="123"){
+    if(isset($_POST['pass']) && $_POST['pass']=="a"){
         $_SESSION['zalogowany']=1;
     }
 
