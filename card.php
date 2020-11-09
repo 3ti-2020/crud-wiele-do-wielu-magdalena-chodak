@@ -7,17 +7,7 @@
     <link rel="stylesheet" href="style_card.css">
 </head>
 <body>
-      <?php 
-    session_start();
-    // var_dump($_SESSION);
-
-    if(isset($_POST['pass']) && $_POST['pass']=="a"){
-        $_SESSION['zalogowany']=1;
-    }
-
-    if(isset($_SESSION['zalogowany']) && $_SESSION['zalogowany']==1){
-        // echo("<br>zalogowano");
-        ?>
+      
 <div class="container">
         <div class="overlay">
           <div class = "items"></div>
@@ -35,15 +25,6 @@
         </div>
       </div>
       </div>
-        <?php
-        echo("<br><a href='index.php?akcja=wyloguj'>WYLOGUJ</a>");
-    }else{
-        echo("<br>ZALOGUJ SIE!");
-    }
-    echo("<h3>MENU</h3>");
-    ECHO("<ul>
-        <li><a href='index.php'>Główna</a>
-    </ul>");
-?>
+       
 </body>
 </html>
