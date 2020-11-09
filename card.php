@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style_card.css">
 </head>
 <body>
-      
+      <div class="glowna">
+        <a href="index.php">Powrót</a>
+      </div>
 <div class="container">
         <div class="overlay">
           <div class = "items"></div>

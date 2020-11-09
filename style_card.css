@@ -1,7 +1,12 @@
 body {
     background-color: #fef5df;
   }
-  
+  a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    }
   .container {
     width: 300px;
     height: 400px;
