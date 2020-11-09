@@ -48,7 +48,7 @@
         <td>
         <form action='delete.php' method='POST'>
         <input type='text'  value=".$row['id_autor_tytul']." style='display: none' name='id_to_delete'>
-        <input type='submit' value='delete'>
+        <input type='submit' class='del' value='x'>
     </form>
 </td>");
         echo("</tr>");

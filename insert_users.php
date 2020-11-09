@@ -7,11 +7,17 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
               }
-
+              
+             
            
-            $sql="DELETE FROM lib_autor_tytul WHERE id_autor_tytul= " .$_POST['id_to_delete'] ;
+            $login=$_POST['login'];
+            $password=$_POST['password'];
+
+            $sql="INSERT INTO users (`id_user`, `login`, `password`) values (null, '$login', '$password')";
 
             echo("$sql");
             mysqli_query($conn,$sql);
-            header("location:admin.php");
-?>
+
+          
+              header("location:admin.php");
+            ?>
