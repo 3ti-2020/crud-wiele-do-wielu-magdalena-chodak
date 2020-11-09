@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magdalena Chodak gr2</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_admin.css">
 </head>
 <body>
 <div class="header">
@@ -18,15 +18,7 @@
 <A href="index.php">WYLOGUJ</a>
 </div>
 </div>
-<div class="main">
-<form action='insert.php' method='POST'>
-        <br>Autor:
-        <input type='text' name='name'>
-        <br>Tytuł:
-        <input type='text' name='tytul'>
-        <br><input type='submit' value='DODAJ'>
-    </form>
-</div>
+
 <div class="sidebar">
 <?php
     $servername="sql7.freemysqlhosting.net";
@@ -63,12 +55,57 @@
     };
     echo("</table>");
     ?>
+    <?php
+    $servername="sql7.freemysqlhosting.net";
+    $username="sql7374471";
+    $password="3ysRJhApZw";
+    $dbname="sql7374471";
+
+    $conn=new mysqli($servername,$username,$password,$dbname);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+      }
+
+    $result=$conn->query("select * from users");
+    echo("<table border='1'>");
+    echo("<tr>
+    <th>id</th>
+    <th>Login</th>
+    <th>Password</th>
+    </tr>");
+
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("
+        <td>".$row['id_user']."</td>
+        <td>".$row['login']."</td>
+        <td>".$row['password']."</td>");
+        echo("</tr>");
+    };
+    echo("</table>");
+    ?>
 </div>
 <div class="footer">
-   
-    
+   <div class="books">
+   <form action='insert_books.php' method='POST'>
+        <br>Autor:
+        <input type='text' name='name'>
+        <br>Tytuł:
+        <input type='text' name='tytul'>
+        <br><input type='submit' value='DODAJ'>
+    </form>
+   </div>
+   <div class="users">
+   <form action='insert_users.php' method='POST'>
+        <br>Login:
+        <input type='text' name='login'>
+        <br>Password:
+        <input type='text' name='password'>
+        <br><input type='submit' value='DODAJ'>
+    </form>
+   </div>
+
     
 </div>
 </body>
-<script src="logowanie.js"></script>
 </html>
