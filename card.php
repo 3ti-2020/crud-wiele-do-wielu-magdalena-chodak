@@ -8,7 +8,7 @@
 </head>
 <body>
       <div class="glowna">
-        <a href="index.php">Powrót</a>
+        <a class="link" href="index.php">Powrót</a>
       </div>
 <div class="container">
         <div class="overlay">
