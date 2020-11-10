@@ -119,7 +119,9 @@
     ?>
 </div>
 <div class="footer">
+
    <div class="books">
+   <h3>Dodaj książke:</h3>
    <form action='insert_books.php' method='POST'>
         <br>Autor:
         <input type='text' name='name'>
@@ -129,19 +131,32 @@
     </form>
    </div>
    <div class="wypo">
+   <h3>Wypozycz:</h3>
    <form action='insert_wyp.php' method='POST'>
         <br>Ksiazka:
-        <input type='text' name='id_autor_tytul'>
+            <select name="id_autor_tytul">
+                <option>Mickiewicz - Pan Taduesz</option>
+                <option>Tolkien - Hobbit</option>
+                <option>Christie - Dom zbrodni</option>
+                <option>Zeromski - Przedwiosnie</option>
+            </select>
+            
         <br>Kto:
-        <input type='text' name='id_user'>
+            <select name="id_user">
+                <option name="1">user1</option>
+                <option name="2">user2</option>
+                <option name="3">user3</option>
+            </select>
+        
         <br>Kiedy wypożyczył:
-        <input type='text' name='data_wyp'>
+        <input type='date' name='data_wyp'>
         <br>Kiedy oddał:
-        <input type='text' name='data_odd'>
+        <input type='date' name='data_odd'>
         <br><input  type='submit' value='Wypozycz'>
     </form>
    </div>
    <div class="users">
+   <h3>Dodaj użytkownika:</h3>
    <form action='insert_users.php' method='POST'>
         <br>Login:
         <input type='text' name='login'>
