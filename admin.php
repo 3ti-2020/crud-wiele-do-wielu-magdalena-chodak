@@ -50,12 +50,6 @@
         <input type='text'  value=".$row['id_autor_tytul']." style='display: none' name='id_to_delete'>
         <input type='submit' class='del' value='x'>
     </form>
-</td>
-<td>
-<form action='insert_wyp.php' method='POST'>
-<input type='text'  style='display: none' name='id_to_delete'>
-<input type='submit' value='Wypożycz'>
-</form>
 </td>");
         echo("</tr>");
     };
@@ -128,10 +122,23 @@
    <div class="books">
    <form action='insert_books.php' method='POST'>
         <br>Autor:
-        <input class='book' type='text' name='name'>
+        <input type='text' name='name'>
         <br>Tytul:
-        <input class='book' type='text' name='tytul'>
+        <input type='text' name='tytul'>
         <br><input  type='submit' value='DODAJ'>
+    </form>
+   </div>
+   <div class="wypo">
+   <form action='insert_wyp.php' method='POST'>
+        <br>Ksiazka:
+        <input type='text' name='id_autor_tytul'>
+        <br>Kto:
+        <input type='text' name='id_user'>
+        <br>Kiedy wypożyczył:
+        <input type='text' name='data_wyp'>
+        <br>Kiedy oddał:
+        <input type='text' name='data_odd'>
+        <br><input  type='submit' value='Wypozycz'>
     </form>
    </div>
    <div class="users">
