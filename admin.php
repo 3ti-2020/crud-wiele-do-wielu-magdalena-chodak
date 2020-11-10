@@ -50,7 +50,46 @@
         <input type='text'  value=".$row['id_autor_tytul']." style='display: none' name='id_to_delete'>
         <input type='submit' class='del' value='x'>
     </form>
+</td>
+<td>
+<form action='insert_wyp.php' method='POST'>
+<input type='text'  style='display: none' name='id_to_delete'>
+<input type='submit' value='Wypożycz'>
+</form>
 </td>");
+        echo("</tr>");
+    };
+    echo("</table>");
+    ?>
+    <?php
+    $servername="sql7.freemysqlhosting.net";
+    $username="sql7374471";
+    $password="3ysRJhApZw";
+    $dbname="sql7374471";
+
+    $conn=new mysqli($servername,$username,$password,$dbname);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+      }
+
+    $result=$conn->query("select * from wypozyczenia");
+    echo("<table border='1'>");
+    echo("<tr>
+    <th>id_wyp</th>
+    <th>id_user</th>
+    <th>id_autor_tytul</th>
+    <th>data_wyp</th>
+    <th>data_odd</th>
+    </tr>");
+
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("
+        <td>".$row['id_wyp']."</td>
+        <td>".$row['id_user']."</td>
+        <td>".$row['id_autor_tytul']."</td>
+        <td>".$row['data_wyp']."</td>
+        <td>".$row['data_oddania']."</td>");
         echo("</tr>");
     };
     echo("</table>");
@@ -89,10 +128,10 @@
    <div class="books">
    <form action='insert_books.php' method='POST'>
         <br>Autor:
-        <input type='text' name='name'>
-        <br>Tytuł:
-        <input type='text' name='tytul'>
-        <br><input type='submit' value='DODAJ'>
+        <input class='book' type='text' name='name'>
+        <br>Tytul:
+        <input class='book' type='text' name='tytul'>
+        <br><input  type='submit' value='DODAJ'>
     </form>
    </div>
    <div class="users">
