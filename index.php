@@ -87,10 +87,9 @@
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("select `id_autor_tytul`, `name`, `tytul` from `lib_autor_tytul`,`lib_tytuly`,`lib_autorzy` where `lib_tytuly`.`id_tytul` = `lib_autor_tytul`.`id_tytul` and `lib_autor_tytul`.`id_autor` = `lib_autorzy`.`id_autor`");
+    $result=$conn->query("select * from books");
     echo("<table border='1'>");
     echo("<tr>
-    <th>id</th>
     <th>autor</th>
     <th>tytul</th>
     </tr>");
@@ -98,7 +97,6 @@
     while($row=$result->fetch_assoc()){
         echo("<tr>");
         echo("
-        <td>".$row['id_autor_tytul']."</td>
         <td>".$row['name']."</td>
         <td>".$row['tytul']."</td>");
         echo("</tr>");
