@@ -21,6 +21,10 @@
 
 <div class="sidebar">
 <?php
+//  $servername="127.0.0.1";
+//  $username="root";
+//  $password="";
+//  $dbname="library";
     $servername="sql7.freemysqlhosting.net";
     $username="sql7374471";
     $password="3ysRJhApZw";
@@ -31,10 +35,9 @@
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("select `id_autor_tytul`, `name`,`tytul` from `lib_autor_tytul`,`lib_tytuly`, `lib_autorzy` where `lib_tytuly`.`id_tytul` =`lib_autor_tytul`.`id_tytul` and `lib_autor_tytul`.`id_autor` = `lib_autorzy`.`id_autor`");
+    $result=$conn->query("Select * from ksiazki");
     echo("<table border='1'>");
     echo("<tr>
-    <th>id</th>
     <th>autor</th>
     <th>tytul</th>
     </tr>");
@@ -42,7 +45,6 @@
     while($row=$result->fetch_assoc()){
         echo("<tr>");
         echo("
-        <td>".$row['id_autor_tytul']."</td>
         <td>".$row['name']."</td>
         <td>".$row['tytul']."</td>
         <td>
@@ -56,7 +58,11 @@
     echo("</table>");
     ?>
     <?php
-    $servername="sql7.freemysqlhosting.net";
+    //  $servername="127.0.0.1";
+    //  $username="root";
+    //  $password="";
+    //  $dbname="library";
+      $servername="sql7.freemysqlhosting.net";
     $username="sql7374471";
     $password="3ysRJhApZw";
     $dbname="sql7374471";
@@ -69,9 +75,8 @@
     $result=$conn->query("select * from wypozyczenia");
     echo("<table border='1'>");
     echo("<tr>
-    <th>id_wyp</th>
-    <th>id_user</th>
-    <th>id_autor_tytul</th>
+    <th>user</th>
+    <th>tytul</th>
     <th>data_wyp</th>
     <th>data_odd</th>
     </tr>");
@@ -79,16 +84,25 @@
     while($row=$result->fetch_assoc()){
         echo("<tr>");
         echo("
-        <td>".$row['id_wyp']."</td>
-        <td>".$row['id_user']."</td>
-        <td>".$row['id_autor_tytul']."</td>
+        <td>".$row['user']."</td>
+        <td>".$row['tytul']."</td>
         <td>".$row['data_wyp']."</td>
-        <td>".$row['data_oddania']."</td>");
+        <td>".$row['data_odd']."</td>
+        <td>
+        <form action='oddane.php' method='POST'>
+        <input type='text'  value=".$row['id_wyp']." style='display: none' name='id_to_delete'>
+        <input type='submit' value='ODDANO'>
+    </form>
+</td>");
         echo("</tr>");
     };
     echo("</table>");
     ?>
     <?php
+    // $servername="127.0.0.1";
+    // $username="root";
+    // $password="";
+    // $dbname="library";
     $servername="sql7.freemysqlhosting.net";
     $username="sql7374471";
     $password="3ysRJhApZw";
@@ -133,20 +147,21 @@
    <div class="wypo">
    <h3>Wypozycz:</h3>
    <form action='insert_wyp.php' method='POST'>
+   <br>Kto:
+            <select name="user">
+                <option>user1</option>
+                <option>user2</option>
+                <option>user3</option>
+            </select>
+
         <br>Ksiazka:
-            <select name="id_autor_tytul">
-                <option>Mickiewicz - Pan Taduesz</option>
-                <option>Tolkien - Hobbit</option>
-                <option>Christie - Dom zbrodni</option>
-                <option>Zeromski - Przedwiosnie</option>
+            <select name="tytul">
+                <option>Pan Taduesz</option>
+                <option>Hobbit</option>
+                <option>Dom zbrodni</option>
+                <option>Przedwiosnie</option>
             </select>
             
-        <br>Kto:
-            <select name="id_user">
-                <option name="1">user1</option>
-                <option name="2">user2</option>
-                <option name="3">user3</option>
-            </select>
         
         <br>Kiedy wypożyczył:
         <input type='date' name='data_wyp'>
