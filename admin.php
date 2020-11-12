@@ -25,17 +25,18 @@
 //  $username="root";
 //  $password="";
 //  $dbname="library";
-    $servername="sql7.freemysqlhosting.net";
-    $username="sql7374471";
-    $password="3ysRJhApZw";
-    $dbname="sql7374471";
+$servername="remotemysql.com";
+$username="Vdn5eyMgWu";
+$password="rbvVhbP03t";
+$dbname="Vdn5eyMgWu";
+
 
     $conn=new mysqli($servername,$username,$password,$dbname);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("Select * from ksiazki");
+    $result=$conn->query("select * from books");
     echo("<table border='1'>");
     echo("<tr>
     <th>autor</th>
@@ -62,10 +63,11 @@
     //  $username="root";
     //  $password="";
     //  $dbname="library";
-      $servername="sql7.freemysqlhosting.net";
-    $username="sql7374471";
-    $password="3ysRJhApZw";
-    $dbname="sql7374471";
+    $servername="remotemysql.com";
+    $username="Vdn5eyMgWu";
+    $password="rbvVhbP03t";
+    $dbname="Vdn5eyMgWu";
+    
 
     $conn=new mysqli($servername,$username,$password,$dbname);
     if (!$conn) {
@@ -103,11 +105,11 @@
     // $username="root";
     // $password="";
     // $dbname="library";
-    $servername="sql7.freemysqlhosting.net";
-    $username="sql7374471";
-    $password="3ysRJhApZw";
-    $dbname="sql7374471";
-
+    $servername="remotemysql.com";
+    $username="Vdn5eyMgWu";
+    $password="rbvVhbP03t";
+    $dbname="Vdn5eyMgWu";
+    
     $conn=new mysqli($servername,$username,$password,$dbname);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
@@ -116,7 +118,6 @@
     $result=$conn->query("select * from users");
     echo("<table border='1'>");
     echo("<tr>
-    <th>id</th>
     <th>Login</th>
     <th>Password</th>
     </tr>");
@@ -124,7 +125,6 @@
     while($row=$result->fetch_assoc()){
         echo("<tr>");
         echo("
-        <td>".$row['id_user']."</td>
         <td>".$row['login']."</td>
         <td>".$row['password']."</td>");
         echo("</tr>");

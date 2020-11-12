@@ -1,8 +1,9 @@
 <?php
-           $servername="sql7.freemysqlhosting.net";
-           $username="sql7374471";
-           $password="3ysRJhApZw";
-           $dbname="sql7374471";
+           $servername="remotemysql.com";
+           $username="Vdn5eyMgWu";
+           $password="rbvVhbP03t";
+           $dbname="Vdn5eyMgWu";
+           
     //       $servername="127.0.0.1";
     //  $username="root";
     //  $password="";
@@ -17,7 +18,7 @@
             $login=$_POST['login'];
             $password=$_POST['password'];
 
-            $sql="INSERT INTO users (`id_user`, `login`, `password`) values (null, '$login', '$password')";
+            $sql="INSERT INTO users (`id_user`, `login`, `password`) values (13, '$login', '$password')";
 
             echo("$sql");
             mysqli_query($conn,$sql);

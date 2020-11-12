@@ -1,8 +1,9 @@
 <?php
-           $servername="sql7.freemysqlhosting.net";
-           $username="sql7374471";
-           $password="3ysRJhApZw";
-           $dbname="sql7374471";
+           $servername="remotemysql.com";
+           $username="Vdn5eyMgWu";
+           $password="rbvVhbP03t";
+           $dbname="Vdn5eyMgWu";
+           
     //     $servername="127.0.0.1";
     //  $username="root";
     //  $password="";

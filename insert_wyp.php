@@ -1,8 +1,9 @@
 <?php
-           $servername="sql7.freemysqlhosting.net";
-           $username="sql7374471";
-           $password="3ysRJhApZw";
-           $dbname="sql7374471";
+$servername="remotemysql.com";
+    $username="Vdn5eyMgWu";
+    $password="rbvVhbP03t";
+    $dbname="Vdn5eyMgWu";
+    
     //       $servername="127.0.0.1";
     //  $username="root";
     //  $password="";
@@ -19,11 +20,11 @@
             $data_wyp=$_POST['data_wyp'];
             $data_odd=$_POST['data_odd'];
 
-            $sql="INSERT INTO wypozyczenia (`id_wyp`,`user`,`tytul`, `data_wyp`, `data_odd`) values (null, '$user', '$tytul','$data_wyp','$data_odd')";
+            $sql="INSERT INTO wypozyczenia (`id_wyp`,`user`,`tytul`, `data_wyp`, `data_odd`) values (13, '$user', '$tytul','$data_wyp','$data_odd')";
 
             echo("$sql");
             mysqli_query($conn,$sql);
 
           
-              // header("location:admin.php");
+              header("location:admin.php");
             ?>
