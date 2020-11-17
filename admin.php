@@ -12,7 +12,7 @@
 <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak"><img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg"></a>
 </div>
 <div class="title">
-<h1>Magdalena Chodak</h1>
+<h1>Magdalena Chodak gr2</h1>
 </div> 
 <div class="menu">  
 <A href="index.php">WYLOGUJ</a>
