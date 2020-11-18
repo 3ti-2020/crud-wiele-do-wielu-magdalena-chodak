@@ -1,8 +1,8 @@
 <?php
-           $servername="remotemysql.com";
-           $username="Vdn5eyMgWu";
-           $password="rbvVhbP03t";
-           $dbname="Vdn5eyMgWu";
+            $servername="mysql-magdaa.alwaysdata.net";
+            $username="magdaa";
+            $password="Pocomito123";
+            $dbname="magdaa_lib";
            
     //       $servername="127.0.0.1";
     //  $username="root";
@@ -18,7 +18,7 @@
             $login=$_POST['login'];
             $password=$_POST['password'];
 
-            $sql="INSERT INTO users (`id_user`, `login`, `password`) values (13, '$login', '$password')";
+            $sql="INSERT INTO users (`id_user`, `login`, `password`) values (null, '$login', '$password')";
 
             echo("$sql");
             mysqli_query($conn,$sql);

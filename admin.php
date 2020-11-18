@@ -12,7 +12,7 @@
 <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak"><img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg"></a>
 </div>
 <div class="title">
-<h1>Magdalena Chodak gr2</h1>
+<h1>Magdalena Chodak</h1>
 </div> 
 <div class="menu">  
 <A href="index.php">WYLOGUJ</a>
@@ -25,18 +25,17 @@
 //  $username="root";
 //  $password="";
 //  $dbname="library";
-$servername="remotemysql.com";
-$username="Vdn5eyMgWu";
-$password="rbvVhbP03t";
-$dbname="Vdn5eyMgWu";
-
+$servername="mysql-magdaa.alwaysdata.net";
+    $username="magdaa";
+    $password="Pocomito123";
+    $dbname="magdaa_lib";
 
     $conn=new mysqli($servername,$username,$password,$dbname);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("select * from books");
+    $result=$conn->query("select `id_autor_tytul`, `name`,`tytul` from `autor_tytul`,`tytuly`,`autorzy` where `tytuly`.`id_tytul` = `autor_tytul`.`id_tytul` and `autor_tytul`.`id_autor` = `autorzy`.`id_autor`");
     echo("<table border='1'>");
     echo("<tr>
     <th>autor</th>
@@ -63,10 +62,10 @@ $dbname="Vdn5eyMgWu";
     //  $username="root";
     //  $password="";
     //  $dbname="library";
-    $servername="remotemysql.com";
-    $username="Vdn5eyMgWu";
-    $password="rbvVhbP03t";
-    $dbname="Vdn5eyMgWu";
+    $servername="mysql-magdaa.alwaysdata.net";
+    $username="magdaa";
+    $password="Pocomito123";
+    $dbname="magdaa_lib";
     
 
     $conn=new mysqli($servername,$username,$password,$dbname);
@@ -105,10 +104,10 @@ $dbname="Vdn5eyMgWu";
     // $username="root";
     // $password="";
     // $dbname="library";
-    $servername="remotemysql.com";
-    $username="Vdn5eyMgWu";
-    $password="rbvVhbP03t";
-    $dbname="Vdn5eyMgWu";
+    $servername="mysql-magdaa.alwaysdata.net";
+    $username="magdaa";
+    $password="Pocomito123";
+    $dbname="magdaa_lib";
     
     $conn=new mysqli($servername,$username,$password,$dbname);
     if (!$conn) {

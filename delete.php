@@ -1,8 +1,8 @@
 <?php
-            $servername="remotemysql.com";
-            $username="Vdn5eyMgWu";
-            $password="rbvVhbP03t";
-            $dbname="Vdn5eyMgWu";
+             $servername="mysql-magdaa.alwaysdata.net";
+             $username="magdaa";
+             $password="Pocomito123";
+             $dbname="magdaa_lib";
             $conn=new mysqli($servername,$username,$password,$dbname);
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());

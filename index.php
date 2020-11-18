@@ -68,10 +68,10 @@
 </div>
 <div class="sidebar">
 <?php
-    $servername="remotemysql.com";
-    $username="Vdn5eyMgWu";
-    $password="rbvVhbP03t";
-    $dbname="Vdn5eyMgWu";
+    $servername="mysql-magdaa.alwaysdata.net";
+    $username="magdaa";
+    $password="Pocomito123";
+    $dbname="magdaa_lib";
     //  $servername="sql7.freemysqlhosting.net";
     // $username="sql7374471";
     // $password="3ysRJhApZw";
@@ -87,7 +87,7 @@
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("select * from books");
+    $result=$conn->query("select `id_autor_tytul`, `name`,`tytul` from `autor_tytul`,`tytuly`,`autorzy` where `tytuly`.`id_tytul` = `autor_tytul`.`id_tytul` and `autor_tytul`.`id_autor` = `autorzy`.`id_autor`");
     echo("<table border='1'>");
     echo("<tr>
     <th>autor</th>
