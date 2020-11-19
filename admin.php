@@ -91,7 +91,7 @@ $servername="mysql-magdaa.alwaysdata.net";
         <td>".$row['data_odd']."</td>
         <td>
         <form action='oddane.php' method='POST'>
-        <input type='text'  value=".$row['id_wyp']." style='display: none' name='id_to_delete'>
+        <input type='text'  value=".$row['id_wyp']." style='display: none' name='id_to_wyp'>
         <input type='submit' value='ODDANO'>
     </form>
 </td>");
@@ -164,8 +164,7 @@ $servername="mysql-magdaa.alwaysdata.net";
         
         <br>Kiedy wypożyczył:
         <input type='date' name='data_wyp'>
-        <br>Kiedy oddał:
-        <input type='date' name='data_odd'>
+    
         <br><input  type='submit' value='Wypozycz'>
     </form>
    </div>
