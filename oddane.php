@@ -14,9 +14,10 @@
               }
 
            
-            $sql="DELETE FROM wypozyczenia WHERE id_wyp= " .$_POST['id_to_delete'] ;
+            $sql="UPDATE `wypozyczenia` set data_odd=CURRENT_DATE WHERE id_wyp= " .$_POST['id_to_wyp'] ;
+            // UPDATE `wypozyczenia` SET data_odd=CURRENT_DATE WHERE id_wyp=''
 
             echo("$sql");
             mysqli_query($conn,$sql);
-            header("location:admin.php");
+            // header("location:admin.php");
 ?>
