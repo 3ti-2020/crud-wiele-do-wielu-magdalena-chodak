@@ -9,7 +9,7 @@
               }
 
            
-            $sql="DELETE FROM books WHERE id_autor_tytul= " .$_POST['id_to_delete'] ;
+            $sql="DELETE FROM autor_tytul WHERE id_autor_tytul= " .$_POST['id_to_delete'] ;
 
             echo("$sql");
             mysqli_query($conn,$sql);
