@@ -33,11 +33,12 @@ img{
 }
 
 .main{
-    grid-area: b;
-    background: lightblue;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
+  grid-area: b;
+  background: lightblue;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-around;
 }
 .sidebar{
     grid-area: c;
