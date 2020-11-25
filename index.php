@@ -63,7 +63,8 @@
 </div>
 <div class="main">
     
-    <a href='card.php' >Kartka</a>
+    <li><a href='card.php' >Kartka</a>
+    <li><a href='todo.html' >To Do</a>
 
 </div>
 <div class="sidebar">
