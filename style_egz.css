@@ -31,10 +31,10 @@ aside{
 }
 .pytania{
     display: flex;
-   padding: 10px;
+   padding: 50px;
    flex-direction: column;
    justify-content: center;
-   grid-gap:10px;
+   grid-gap:20px;
 }
 .pyt1{
    
