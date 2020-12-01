@@ -63,9 +63,9 @@
 </div>
 <div class="main">
     
-    <a href='card.php' >Kartka</a>
-    <a href='todo.html' >To Do</a>
-    <a href='egzamin.html' >Pytanie E.14</a>
+    <a href='card.php'>Kartka</a>
+    <a href='todo.html'>Lista To Do</a>
+    <a href='egzamin.html'>Pytania E.14</a>
 
 </div>
 <div class="sidebar">
