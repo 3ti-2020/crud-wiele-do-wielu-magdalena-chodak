@@ -20,7 +20,7 @@
             $data_wyp=$_POST['data_wyp'];
             $data_odd=$_POST['data_odd'];
 
-            $sql="INSERT INTO wypozyczenia (`id_wyp`,`user`,`tytul`, `data_wyp`, `data_odd`) values (null, '$user', '$tytul','$data_wyp','$data_odd')";
+            $sql="INSERT INTO wypozyczenia (`id_wyp`,`user`,`tytul`, `data_wyp`, `data_odd`) values (null, '$user', '$tytul','$data_wyp',('$data_wyp'+7))";
 
             echo("$sql");
             mysqli_query($conn,$sql);

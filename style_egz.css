@@ -1,0 +1,45 @@
+body{
+    display: grid;
+    background-color: grey;
+    grid-gap:10px;
+    padding: 10px;
+    grid-template-areas:
+    'a'
+    'b' ;
+}
+header{
+    grid-area: a;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    }
+aside{
+    grid-area: b;
+    background-color: lightgrey;
+}
+.pytania{
+    display: flex;
+   padding: 10px;
+   flex-direction: column;
+   justify-content: center;
+   grid-gap:5px;
+}
+.pyt1{
+   
+    background-color: whitesmoke;
+}
+.pyt2{
+    
+    background-color: whitesmoke;
+}
+.pyt{
+    font-weight: bold;
+}

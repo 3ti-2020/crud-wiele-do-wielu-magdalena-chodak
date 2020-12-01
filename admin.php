@@ -74,12 +74,13 @@ $servername="mysql-magdaa.alwaysdata.net";
       }
 
     $result=$conn->query("select * from wypozyczenia");
-    echo("<table border='1'>");
+    echo("<table border='2'>");
     echo("<tr>
     <th>user</th>
     <th>tytul</th>
-    <th>data_wyp</th>
-    <th>data_odd</th>
+    <th>wypozyczono</th>
+    <th>okres</th>
+    <th>data oddania</th>
     </tr>");
 
     while($row=$result->fetch_assoc()){
@@ -88,12 +89,16 @@ $servername="mysql-magdaa.alwaysdata.net";
         <td>".$row['user']."</td>
         <td>".$row['tytul']."</td>
         <td>".$row['data_wyp']."</td>
-        <td>".$row['data_odd']."</td>
         <td>
-        <form action='oddane.php' method='POST'>
+        <form action='dod7.php' method='POST'>
         <input type='text'  value=".$row['id_wyp']." style='display: none' name='id_to_wyp'>
-        <input type='submit' value='ODDANO'>
+        <input type='submit' value='+7'>
     </form>
+</td>
+        <td>".$row['data_odd']."</td>
+        
+<td>
+      <button clas='btn'>Oddano</button>  
 </td>");
         echo("</tr>");
     };
@@ -160,10 +165,9 @@ $servername="mysql-magdaa.alwaysdata.net";
                 <option>Dom zbrodni</option>
                 <option>Przedwiosnie</option>
             </select>
-            
-        
         <br>Kiedy wypożyczył:
         <input type='date' name='data_wyp'>
+        
     
         <br><input  type='submit' value='Wypozycz'>
     </form>
