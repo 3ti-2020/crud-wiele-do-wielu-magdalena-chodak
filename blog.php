@@ -35,7 +35,7 @@ $servername="mysql-magdaa.alwaysdata.net";
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $result=$conn->query("SELECT id,post,tag FROM `tag_post`,`tag`,`post` where tag_post.id_post=post.id_post and tag_post.id_tag=tag.id_tag");
+    $result=$conn->query("SELECT id,title,post,tag FROM `tag_post`,`tag`,`post` where tag_post.id_post=post.id_post and tag_post.id_tag=tag.id_tag");
     echo("<table border='1'>");
     echo("<tr>
     <th>id</th>
