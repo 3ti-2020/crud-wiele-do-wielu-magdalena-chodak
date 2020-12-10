@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magdalena Chodak gr2</title>
+    <title>Strona Głowna</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-magdalena-chodak"><img src="https://miro.medium.com/max/2560/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg"></a>
 </div>
 <div class="title">
-<h1>Magdalena Chodak</h1>
+<h1>Magdalena Chodak gr2</h1>
 </div> 
 <div class="menu">
     
@@ -66,6 +66,8 @@
     <a href='card.php'>Kartka</a>
     <a href='todo.html'>Lista To Do</a>
     <a href='egzamin.html'>Pytania E.14</a>
+    <a href='blog.php'>Blog</a>
+
 
 </div>
 <div class="sidebar">
