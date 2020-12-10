@@ -52,8 +52,8 @@ $servername="mysql-magdaa.alwaysdata.net";
         <td>".$row['post']."</td>
         <td>".$row['tag']."</td>
         <td>
-        <form action='delete.php' method='POST'>
-        <input type='text'  value=".$row['id']." style='display: none' name='id_to_delete'>
+        <form action='delete_blog.php' method='POST'>
+        <input type='text'  value=".$row['id']." style='display: none' name='id'>
         <input type='submit' class='del' value='x'>
     </form>
 </td>");
@@ -64,9 +64,9 @@ $servername="mysql-magdaa.alwaysdata.net";
 </div>
 <div class="footer">
 
-   <div class="books">
+   <div class="blog">
    <h3>Dodaj post:</h3>
-   <form action='insert_post.php' method='POST'>
+   <form action='insert_blog.php' method='POST'>
         <br>tytul:
         <input type='text' name='title'>
         <br>post:

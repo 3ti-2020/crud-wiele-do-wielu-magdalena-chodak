@@ -40,6 +40,7 @@ img{
     align-items: center;
     padding: 20px;
 }
+
 .footer{
     grid-area: c;
     background: rgb(180, 221, 204);
