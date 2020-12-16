@@ -18,7 +18,20 @@
 <A href="index.php">Powrót</a>
 </div>
 </div>
-
+<div class="menu">
+<div class="dod_post">
+   <h3>Dodaj post:</h3>
+   <form action='insert_blog.php' method='POST'>
+        <br>Tytuł:
+        <input type='text' name='title'>
+        <br>Treść:
+        <input type='text' name='post'>
+        <br>Tag:
+        <input type='text' name='tag'>
+        <br><input  type='submit' value='WSTAW'>
+    </form>
+   </div>
+</div>
 <div class="sidebar">
 <?php
       $servername="mysql-magdaa.alwaysdata.net";
@@ -36,6 +49,7 @@
     <div class="posts">
         <?php
                 while($row = $result->fetch_assoc()){
+                    echo("<div class='pole'>");
                     echo("<div class='tytul'>");
                         echo("<h1>".$row['title']."</h1>");
                     echo("</div>");
@@ -43,7 +57,8 @@
                         echo("<p>".$row['post']."</p>"); 
                     echo("</div>");
                     echo("<div class='tagi'>");
-                    echo("<h3>".$row['tag']."</h3>");
+                    echo("<h3>tagi: ".$row['tag']."</h3>");
+                echo("</div>");
                 echo("</div>"); 
                 }
                

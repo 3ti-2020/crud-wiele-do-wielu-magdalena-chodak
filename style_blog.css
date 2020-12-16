@@ -2,9 +2,9 @@ body{
     background:rgb(64, 235, 178);
     display: grid;
     grid-template-areas:
-    'a'
-    'b'
-    'c' ;
+    'a a'
+    'c b'
+     ;
     grid-gap: 10px;
     padding: 10px;
     height: 96vh;
@@ -31,7 +31,13 @@ img{
   height: 50px;
   border-radius: 20px;
 }
-
+.menu{
+    grid-area: c;
+    background: rgb(180, 221, 204);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
 .sidebar{
     grid-area: b;
     background: rgb(180, 221, 204);
@@ -50,28 +56,25 @@ img{
 .tytul{
     padding: 10px;
     background: rgb(29, 196, 146);
+    border-radius:20px;
+}
+.pole{
+    padding: 20px;
 }
 
 .tekst{
     padding: 10px;
     background: rgb(107, 238, 216);
+    
 }
 .tagi{
     padding: 10px;
-    background: rgb(107, 238, 216)
+    background: rgb(107, 238, 216);
+
 }
 
-.footer{
-    grid-area: c;
-    background: rgb(180, 221, 204);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.del{
-    border-radius: 30px;
-}
+
+
 
 
   
