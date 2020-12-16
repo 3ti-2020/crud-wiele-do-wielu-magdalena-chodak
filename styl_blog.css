@@ -20,7 +20,7 @@ body{
 h1{
     font-size: 40px;
 }
-a{
+.back{
 font-size: 30px;
 text-decoration: none;
 color: black;
@@ -63,12 +63,12 @@ img{
 .tagi{
     padding: 10px;
     background: rgb(107, 238, 216);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+ border-radius: 20px;
+ border:solid black 1px;
+ 
+ text-decoration: none;
 }
+  
 
 
 

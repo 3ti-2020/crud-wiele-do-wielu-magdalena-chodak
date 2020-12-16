@@ -15,7 +15,7 @@
 <h1>BLOG</h1>
 </div> 
 <div class="menu">  
-<A href="index.php">Powrót</a>
+<a class="back" href="index.php">Powrót</a>
 </div>
 </div>
 
@@ -39,11 +39,11 @@
                 while($row = $result -> fetch_assoc()){
                     echo("<div class='pole'>");
                         echo("<div class='tytul'><h2>".$row['title']."</h2></div>");
-                        echo("<div class='tekst'>".$row['post']."</div>");
+                        echo("<div class='tekst'><p>".$row['post']."</p></div>");
                         $id = $row['id_post'];
                         $result2 = $conn -> query("SELECT tag FROM `tag_post`,`tag`,`post` where tag_post.id_post=post.id_post and tag_post.id_tag=tag.id_tag AND tag_post.id_post = $id");
                         while($row2 = $result2 -> fetch_assoc()){
-                            echo("<nav class='tagi'>".$row2['tag']."</nav>");
+                            echo("<tr><b><a class='tagi' href='?= ".$row2['tag']."'>".$row2['tag']."</a></b></tr> ");
                         }
                     echo("</div>");
                 }
