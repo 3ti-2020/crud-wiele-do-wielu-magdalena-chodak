@@ -1,0 +1,81 @@
+body{
+    background:rgb(64, 235, 178);
+    display: grid;
+    grid-template-areas:
+    'a'
+    'b'
+     ;
+    grid-gap: 10px;
+    padding: 10px;
+    height: 96vh;
+}
+.header{
+    grid-area: a;
+    background: rgb(180, 221, 204);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+h1{
+    font-size: 40px;
+}
+a{
+font-size: 30px;
+text-decoration: none;
+color: black;
+font-style: oblique;
+}
+img{
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.sidebar{
+    grid-area: b;
+    background: rgb(180, 221, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.posts{
+    display: flex;
+   padding: 100px;
+   flex-direction: column;
+   justify-content: center;
+}
+.tytul{
+    padding: 10px;
+    background: rgb(29, 196, 146);
+}
+.pole{
+    padding: 20px;
+}
+
+.tekst{
+    padding: 10px;
+    background: rgb(107, 238, 216);
+    
+}
+.tagi{
+    padding: 10px;
+    background: rgb(107, 238, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+
+
+
+  
+  
+  
+  
+  
